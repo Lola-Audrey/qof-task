@@ -4,6 +4,7 @@ actions:
   generate_dataset:
     run: >
       ehrql:v1 generate-dataset analysis/dm_reg_dataset_lola.py
+      --test-data-file analysis/test_dm_reg_dataset_lola.py
       --output output/dm_reg_dataset_lola.csv
     outputs:
       highly_sensitive:
