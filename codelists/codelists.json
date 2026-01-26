@@ -17,6 +17,36 @@
       "url": "https://www.opencodelists.org/codelist/nhsd-primary-care-domain-refsets/dsep_cod/20200812/",
       "downloaded_at": "2026-01-26 09:47:43.026839Z",
       "sha": "c047712d3b766520fa743c7995c27b2bba79fac7"
+    },
+    "nhsd-primary-care-domain-refsets-dmpcapu_cod.csv": {
+      "id": "nhsd-primary-care-domain-refsets/dmpcapu_cod/20250912",
+      "url": "https://www.opencodelists.org/codelist/nhsd-primary-care-domain-refsets/dmpcapu_cod/20250912/",
+      "downloaded_at": "2026-01-26 10:33:42.732936Z",
+      "sha": "a53a1cda7d868505dbb369d502dd13ece610f01c"
+    },
+    "nhsd-primary-care-domain-refsets-dseppu_cod.csv": {
+      "id": "nhsd-primary-care-domain-refsets/dseppu_cod/20250912",
+      "url": "https://www.opencodelists.org/codelist/nhsd-primary-care-domain-refsets/dseppu_cod/20250912/",
+      "downloaded_at": "2026-01-26 10:33:42.792236Z",
+      "sha": "363d004901101178f881fa306fcbc4d41d441ac9"
+    },
+    "nhsd-primary-care-domain-refsets-dsepdec_cod.csv": {
+      "id": "nhsd-primary-care-domain-refsets/dsepdec_cod/20250912",
+      "url": "https://www.opencodelists.org/codelist/nhsd-primary-care-domain-refsets/dsepdec_cod/20250912/",
+      "downloaded_at": "2026-01-26 10:33:42.863519Z",
+      "sha": "db03e412326361c58de83b90935e645f4020ddc7"
+    },
+    "nhsd-primary-care-domain-refsets-dsepsu_cod.csv": {
+      "id": "nhsd-primary-care-domain-refsets/dsepsu_cod/20250912",
+      "url": "https://www.opencodelists.org/codelist/nhsd-primary-care-domain-refsets/dsepsu_cod/20250912/",
+      "downloaded_at": "2026-01-26 10:33:42.922679Z",
+      "sha": "7df341429481df30836d12edeb3b3024d9e7697c"
+    },
+    "nhsd-primary-care-domain-refsets-dminvite_cod.csv": {
+      "id": "nhsd-primary-care-domain-refsets/dminvite_cod/20250912",
+      "url": "https://www.opencodelists.org/codelist/nhsd-primary-care-domain-refsets/dminvite_cod/20250912/",
+      "downloaded_at": "2026-01-26 10:33:42.996085Z",
+      "sha": "f393aa893e8dcdb547abd1d5e9d46499557eed07"
     }
   }
 }

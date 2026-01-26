@@ -1,3 +1,8 @@
 nhsd-primary-care-domain-refsets/dm_cod/20250912
 nhsd-primary-care-domain-refsets/dmres_cod/20250912
 nhsd-primary-care-domain-refsets/dsep_cod/20200812
+nhsd-primary-care-domain-refsets/dmpcapu_cod/20250912
+nhsd-primary-care-domain-refsets/dseppu_cod/20250912
+nhsd-primary-care-domain-refsets/dsepdec_cod/20250912
+nhsd-primary-care-domain-refsets/dsepsu_cod/20250912
+nhsd-primary-care-domain-refsets/dminvite_cod/20250912
