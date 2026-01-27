@@ -3,7 +3,6 @@ from ehrql.tables.core import practice_registrations, patients, clinical_events
 from codelists import dm_cod, dmres_cod
 
 measures = create_measures()
-INTERVAL.end_date
 
 # Events up to month end
 selected_events = clinical_events.where(clinical_events.date <= INTERVAL.end_date)
