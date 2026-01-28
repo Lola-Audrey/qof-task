@@ -1,4 +1,4 @@
-from ehrql import INTERVAL, create_measures, months
+from ehrql import INTERVAL, create_measures, months, case, when
 from ehrql.tables.core import practice_registrations, patients, clinical_events
 from codelists import dm_cod, dmres_cod
 
@@ -42,20 +42,40 @@ on_dm017_register = (
     aged_17_or_older & is_alive & is_registered & has_unresolved_diabetes
 )
 
+has_recorded_sex = patients.sex.is_in(["male", "female"])
+
+age = patients.age_on(INTERVAL.start_date)
+age_band = case(
+    when((age >= 0) & (age < 20)).then("0-19"),
+    when((age >= 20) & (age < 40)).then("20-39"),
+    when((age >= 40) & (age < 60)).then("40-59"),
+    when((age >= 60) & (age < 80)).then("60-79"),
+    when(age >= 80).then("80+"),
+)
+
 # Measures
-# Count on register each month
+# Proportion on register each month by sex
 measures.define_measure(
-    name="dm017_register_count",
+    name="dm017_register_composition_by_sex",
     numerator=on_dm017_register,
-    denominator=on_dm017_register,
+    denominator=on_dm017_register & has_recorded_sex,
     group_by={"sex": patients.sex},
     intervals=months(12).starting_on("2023-04-01"),
 )
 
+# Proportion on register each month by age
+measures.define_measure(
+    name="dm017_register_composition_by_age",
+    numerator=on_dm017_register,
+    denominator=on_dm017_register,
+    group_by={"age_band": age_band},
+    intervals=months(12).starting_on("2023-04-01"),
+)
+
 # Prevalence: % of registered patients aged 17+ and alive
-# measures.define_measure(
-#     name="dm017_register_prevalence",
-#     numerator=on_dm017_register,
-#     denominator=aged_17_or_older & is_alive & is_registered,
-#     intervals=months(12).starting_on("2023-04-01"),
-# )
+measures.define_measure(
+    name="dm017_register_prevalence",
+    numerator=on_dm017_register,
+    denominator=aged_17_or_older & is_alive & is_registered,
+    intervals=months(12).starting_on("2023-04-01"),
+)
