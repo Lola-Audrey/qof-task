@@ -17,7 +17,7 @@ actions:
       moderately_sensitive:
         measure: output/dm017/*.csv
   visualise_dm017_measures:
-    run: Rscript analysis/visualise_measures.R
+    run: r:v2 analysis/visualise_measures.R
     needs: [generate_dm017_measures]
     outputs:
       moderately_sensitive:
