@@ -9,3 +9,10 @@ actions:
     outputs:
       highly_sensitive:
         dataset: output/dm_reg_dataset_lola.csv
+  generate_dm017_measures:
+    run: > 
+      ehrql:v1 generate-measures analysis/measures_definition_dm017.py
+      --output output/dm017/:csv
+    outputs:
+      moderately_sensitive:
+        measure: output/dm017/*.csv
