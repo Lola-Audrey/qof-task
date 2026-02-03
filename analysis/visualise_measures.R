@@ -86,5 +86,6 @@ ggsave(
     filename = here("output", "figures", "measures_plot.png"),
     plot = measures_plot,
     width = 12,
-    height = 5
+    height = 5,
+    create.dir=TRUE
 )
