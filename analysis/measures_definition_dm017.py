@@ -42,7 +42,7 @@ on_dm017_register = (
     aged_17_or_older & is_alive & is_registered & has_unresolved_diabetes
 )
 
-has_recorded_sex = patients.sex.is_in(["male", "female"])
+has_recorded_sex = patients.sex.is_not_null()
 
 age = patients.age_on(INTERVAL.start_date)
 age_band = case(
