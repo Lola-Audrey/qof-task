@@ -13,7 +13,10 @@ dm_measure_sex <- read_csv(
     here("output", "dm017", "dm017_register_composition_by_sex.csv")
 )
 
-prevalence_plot <- ggplot(dm_measure_prevalence, aes(x = interval_start, y = ratio)) +
+prevalence_plot <- ggplot(
+    dm_measure_prevalence,
+    aes(x = interval_start, y = ratio)
+) +
     geom_line() +
     geom_point() +
     scale_x_date(
@@ -33,8 +36,10 @@ prevalence_plot <- ggplot(dm_measure_prevalence, aes(x = interval_start, y = rat
     theme_light()
 
 
-
-age_plot <-  ggplot(dm_measure_age_group, aes(x = interval_start, y = numerator, color = age_band)) +
+age_plot <- ggplot(
+    dm_measure_age_group,
+    aes(x = interval_start, y = numerator, color = age_band)
+) +
     geom_line() +
     geom_point() +
     scale_x_date(
@@ -53,8 +58,10 @@ age_plot <-  ggplot(dm_measure_age_group, aes(x = interval_start, y = numerator,
     theme_light()
 
 
-
-sex_plot <-  ggplot(dm_measure_sex, aes(x = interval_start, y = numerator, color = sex)) +
+sex_plot <- ggplot(
+    dm_measure_sex,
+    aes(x = interval_start, y = numerator, color = sex)
+) +
     geom_line() +
     geom_point() +
     scale_x_date(
@@ -72,10 +79,12 @@ sex_plot <-  ggplot(dm_measure_sex, aes(x = interval_start, y = numerator, color
     ) +
     theme_light()
 
-measures_plot <- (prevalence_plot/ age_plot /sex_plot) + 
+measures_plot <- (prevalence_plot / age_plot / sex_plot) +
     plot_annotation(tag_levels = 'A')
 
-ggsave(filename = here("output", "figures", "measures_plot.png"), 
-    plot = measures_plot, 
-    width = 12, 
-    height = 5)
+ggsave(
+    filename = here("output", "figures", "measures_plot.png"),
+    plot = measures_plot,
+    width = 12,
+    height = 5
+)
